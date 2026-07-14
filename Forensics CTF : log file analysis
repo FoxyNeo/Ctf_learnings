@@ -5,5 +5,5 @@ Download the encoded data here: Logs Data. Be prepared—the file is large, and 
 When I downloaded the log file, I saw that it was all just base64 dump so I opened Kali linux and ran "base64 -d" this perticular command on the given log file.
 It gave me a image file in .png format, when I opened it I saw another string in the bottom of the image, Then I used chatgpt to check which format was the given string was in, it was in hexadecimal.
 I ran 'echo "7069636F4354467B..." | xxd -r -p' on the whole string and got the whole flag. 
-'7069636F4354467B' this is some part of the flag that I found in this CTF.
+'7069636F4354467B' this is some part of the flag that I found in this CTF. It says 'picoCTF{'
 Another one completed!!
