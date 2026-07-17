@@ -1,0 +1,10 @@
+Another CTF question done, quite an easy one, needed basic terminal knowledge to solve it.
+A total of 5 basic commands were used to solve it.
+The question was : https://learn.cylabacademy.org/library/766?page=1&category=5
+It took a total of five basic terminal commands to get the flag:
+1. command to decode the base64 encoded flag.
+2. command to reverse the string.
+3. command to replace '-' to '_'
+4. command to replace '()' to '{}'
+5. command to convert the expression recovered from step 4 into the final flag, i.e, ROT13 to letters.
+Sneak peek of the flag :  picoCTF{Revers1ng_...
