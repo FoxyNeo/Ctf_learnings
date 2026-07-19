@@ -1,0 +1,15 @@
+Completed a medium level challenge on Cylab challenges, it was a forensics question.
+  Question : https://learn.cylabacademy.org/library/720?page=1&category=4&difficulty=2
+It gave a .zip file which holded the main disk image.
+we had to find the line where the flag, first hint suggested to create a sleuthkit MAC timeline, the second hint given suggested to look for unsual timestamps in the created timeline.
+Through that I came to find out about a timestamp which was made in 1985 in the disk image. That was the break through.
+when I looked futher into it and found a bcab directory. When I looked into it, it had an encoded ASCII flag in it.
+It was a base64 text, when decodig it with (echo "" | base64 -d), Another decodation text came up.
+That's when I got to know about leetspeak ecodation. I googled a decodation command for it and decoded it with : (echo "" | sed 'y/01347/oieat/')
+Even after decoding the leetspeak encodation flag was not complete.
+I had to assume most of the letters, as for how different letters are used as mnemonics in ctf, such as:
+how,
+3 -> e
+t -> 7
+1 -> i OR I OR l etc.
+that's how i was able to clear the ctf question.
