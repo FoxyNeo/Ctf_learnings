@@ -1,0 +1,15 @@
+#FORENSICS 
+
+Another one of the forencis challenge completed, first time worked with wireshark to look in .pcap (packet capture) file.
+The challenge was called Ph4nt0m 1ntrud3r : https://learn.cylabacademy.org/library/459?page=1&category=4
+A pcap file was given for inspection.
+When opened in wireshark all the 22 tcp packets were shown in the file.
+There was a tcp packet on the 9th line which was the starting of the flag. From it I was able to get the size of the packet that will have the bits of the flag.
+The flag was scattered between these 22 tcp packets.
+Once I got the head of the flag and the size of the packet which will have the otehr parts of the flag, I check all the packets with 12 bytes.
+That's how I found out a total of 6 packets with 12bytes size and they all contains a part of the flag.
+Still when I had all the parts of the flag, it was difficult to combine the parts to make the right flag.
+That's when a hint came in clutch, it said to look closely into the time stamps of the captured packets.
+That's when I was able to combine all the 6 parts of the flag perfectly as in the listing of wireshark it was all scrumbled but, after looking at the time stamps the packets that were captured first needed to be in front and then move in the order.
+Easy challege but without a bit of research and the knowledge of how to use wireshark it was a bit hard, it was fun it work with wireshark fo rthe first time.
+sneak peek of the flag : picoCTF{1t_w4s.....}
